@@ -3,42 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calligraphy Art</title>
+  <title>Calligraphy Art | Elders Indic Calligraphy</title>
 
-  <!-- Bootstrap -->
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Leaflet -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
-  <!-- Social Icons CDN -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </head>
 
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg custom-navbar navbar-dark">
-  <div class="container-fluid">
-    <i class="fas fa-pen-nib"></i>
-    <a class="navbar-brand d-flex align-items-center" href="index.html">
+<nav class="navbar navbar-expand-lg custom-navbar navbar-dark sticky-top">
+  <div class="container-fluid px-lg-4">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+      <i class="fas fa-pen-nib brand-icon"></i>
       <span>Calligraphy Art</span>
     </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse">
-  <span class="navbar-toggler-icon"></span>
-</button>
+    <!-- Responsive Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-
-    <div class="collapse navbar-collapse justify-content-center">
-      <ul class="navbar-nav gap-4">
+    <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
+      <ul class="navbar-nav gap-2 gap-lg-3">
         <li class="nav-item"><a class="nav-link px-3" href="index.html">Home</a></li>
         <li class="nav-item dropdown">
-          <a class="nav-link px-3 dropdown-toggle" href="#" data-bs-toggle="dropdown">Categories</a>
+          <a class="nav-link px-3 dropdown-toggle active" href="#" data-bs-toggle="dropdown">Categories</a>
           <ul class="dropdown-menu">
+            <li><a class="dropdown-item fw-bold" href="catogries.html"><i class="fas fa-th-large me-2"></i>All Categories</a></li>
+            <li><hr class="dropdown-divider border-secondary my-1"></li>
             <li class="dropdown-submenu">
               <a class="dropdown-item dropdown-toggle" href="#">For Kids</a>
               <ul class="dropdown-menu">
@@ -48,19 +52,18 @@
               </ul>
             </li>
             <li class="dropdown-submenu">
-              <a class="dropdown-item dropdown-toggle" href="#">For Elders</a>
+              <a class="dropdown-item dropdown-toggle active" href="#">For Elders</a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="elders-arabic.html">Arabic</a></li>
                 <li><a class="dropdown-item" href="elders-greek.html">Greek</a></li>
-                <li><a class="dropdown-item" href="elders-indic.html">Indic</a></li>
+                <li><a class="dropdown-item active" href="elders-indic.html">Indic</a></li>
               </ul>
             </li>
-
           </ul>
         </li>
 
         <li class="nav-item"><a class="nav-link px-3" href="gallery.html">Gallery</a></li>
-        <li class="nav-item"><a class="nav-link px-3 active" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link px-3" href="contact.html">Contact</a></li>
         <li class="nav-item"><a class="nav-link px-3" href="feedback.html">Feedback</a></li>
       </ul>
     </div>
@@ -69,144 +72,176 @@
 
 <!-- ELDERS BANNER -->
 <section class="eldersbanner">
-  <div>
-    <div class="eldersheading">
-      <img src="Elders Banner 2.png" alt="">
-    </div>
-    <h1>Calligraphy for Elders</h1>
+  <img src="Elders Banner 2.png" alt="Calligraphy for Elders Banner">
+  <div class="banner-overlay">
+    <h1 class="fw-bold">Elders Indic Calligraphy</h1>
     <p>A calm and meaningful journey into the art of beautiful writing</p>
   </div>
 </section>
 
 <!-- ABOUT SECTION -->
-  <section id="about" class="about">
-    <div class="about-container">
-
+<section id="about" class="elders-calligraphy-about">
+  <div class="elders-about-card">
+    <span class="category-badge"><i class="fas fa-feather-alt me-1"></i> Timeless Art & Mindfulness</span>
     <h2>About Elders Calligraphy</h2>
-    <p class="about-intro">
+    <p>
       Calligraphy for elders focuses on patience, creativity, and mental relaxation.
-      It helps improve focus, fine motor skills, and keeps the mind active through traditional art
+      It helps improve focus, fine motor skills, and keeps the mind active through traditional art.
     </p>
-    <!-- ABOUT ELDERS INDIC CALLIGRAPHY -->
+
+    <div class="elders-divider"></div>
+
     <h2>Elders Indic Calligraphy</h2>
-    <p>Elders Greek calligraphy means Greek calligraphy artwork that honors and respects elderly people, using beautiful Greek lettering to write messages, blessings, or quotes about seniors—such as wisdom, dignity, long life, and gratitude.
-
+    <p>
+      Elders Indic calligraphy honors sacred writing traditions such as Devanagari, Sanskrit, Tamil, and Bengali scripts. Senior learners practice the continuous rhythm of the headline (shirorekha), ornamental floral borders, and traditional ink techniques celebrating peace, auspicious blessings, and timeless cultural heritage.
     </p>
-</div>
-  </section>
+  </div>
+</section>
 
-<!-- PRACTICE -->
-      <section class="container my-5 text-center">
-        <h2 style="color: #5a1e00;">Practice Work</h2>
-        <div class="row justify-content-center mt-4">
-    <!-- Greek -->
-    <div class="col-md-4 mb-4">
-      <img src="elders indic practice1.png" class="img-fluid rounded shadow">
-      <h4 class="mt-3 arabic-title">Indic Calligraphy</h4>
+<!-- PRACTICE WORK -->
+<section class="container my-5 text-center">
+  <span class="category-badge"><i class="fas fa-pencil-alt me-1"></i> Foundation Exercises</span>
+  <h2 style="color: var(--primary); margin-bottom: 30px;">Practice Work & Studies</h2>
+
+  <div class="row justify-content-center g-4">
+    <!-- Indic Practice 1 -->
+    <div class="col-lg-4 col-md-6">
+      <div class="practice-card">
+        <img src="elders indic practice1.png" alt="Devanagari Akshar Practice">
+        <h4 class="indic-title">Devanagari Akshar Practice</h4>
+        <p class="text-muted small mt-2 mb-0">Mastering letter proportions, stroke angles, and ink flow.</p>
+      </div>
     </div>
 
-    <div class="col-md-4 mb-4">
-      <img src="elders indic practice2.png" class="img-fluid rounded shadow">
-      <h4 class="mt-3 arabic-title">Indic Calligraphy</h4>
+    <!-- Indic Practice 2 -->
+    <div class="col-lg-4 col-md-6">
+      <div class="practice-card">
+        <img src="elders indic practice2.png" alt="Headline Flow Practice">
+        <h4 class="indic-title">Headline (Shirorekha) Flow</h4>
+        <p class="text-muted small mt-2 mb-0">Smooth horizontal alignment and balanced vertical stems.</p>
+      </div>
     </div>
 
-    <div class="col-md-4 mb-4">
-      <img src="elders indic practice3.png" class="img-fluid rounded shadow">
-      <h4 class="mt-3 arabic-title">Indic Calligraphy</h4>
+    <!-- Indic Practice 3 -->
+    <div class="col-lg-4 col-md-6">
+      <div class="practice-card">
+        <img src="elders indic practice3.png" alt="Ornamental Flourish Study">
+        <h4 class="indic-title">Ornamental Flourish Study</h4>
+        <p class="text-muted small mt-2 mb-0">Intricate curves, matras, and traditional border motifs.</p>
+      </div>
     </div>
   </div>
+</section>
 
-  <!-- INDIC ARTWORK -->
-  <h1 style="color: #5a1e00; text-align: center; margin-top: 20px; font-family: Georgia, 'Times New Roman', Times, serif;">Elders Indic Artwork</h1>
-   <div class="container">
-  <div class="row">
+<!-- INDIC ARTWORK -->
+<section class="container my-5">
+  <div class="text-center mb-4">
+    <span class="category-badge"><i class="fas fa-images me-1"></i> Gallery Collection</span>
+    <h2 style="color: var(--primary);">Elders Indic Artwork</h2>
+    <p style="color: var(--text-body); max-width: 700px; margin: 0 auto; font-size: 1.1rem;">
+      Sacred words and celebratory compositions in traditional Devanagari script.
+    </p>
+  </div>
 
-    <div class="col-md-4 mb-4">
-      <img src="elders indic artwork1.png" class="img-fluid kids-img">
-      <h5 class="mt-2 text-center" style="color: #5a1e00;">Indic Calligraphy</h5>
-      <p class="text-center" style="color: #5a1e00;">
-        This artwork showcases traditional Indic calligraphy featuring the word “शांति” (Peace) in bold black ink, decorated with floral patterns, gold accents, and an elegant ornamental border.
-      </p>
+  <div class="row g-4">
+    <div class="col-lg-4 col-md-6">
+      <div class="artwork-card">
+        <img src="elders indic artwork1.png" class="artwork-img" alt="Shanti Peace Inscription">
+        <h5 class="artwork-title">Shanti (Peace) Inscription</h5>
+        <p class="artwork-desc">
+          Traditional Indic calligraphy featuring the word “शांति” (Peace) in bold black ink, decorated with floral patterns, gold accents, and an elegant ornamental border.
+        </p>
+      </div>
     </div>
 
-    <div class="col-md-4 mb-4">
-      <img src="elders indic artwork2.png" class="img-fluid kids-img">
-      <h5 class="mt-2 text-center" style="color: #5a1e00;">Indic Calligraphy</h5>
-      <p class="text-center" style="color: #5a1e00;">
-        This artwork showcases beautiful Indic calligraphy of “प्रेम” (Love) written in a graceful style, surrounded by soft flowers, golden designs, and classic calligraphy tools to give a rich artistic look.
-      </p>
+    <div class="col-lg-4 col-md-6">
+      <div class="artwork-card">
+        <img src="elders indic artwork2.png" class="artwork-img" alt="Prem Love Flowing Script">
+        <h5 class="artwork-title">Prem (Love) Flowing Script</h5>
+        <p class="artwork-desc">
+          Beautiful Indic calligraphy of “प्रेम” (Love) written in a graceful style, surrounded by soft flowers, golden designs, and classic calligraphy tools to give a rich artistic look.
+        </p>
+      </div>
     </div>
 
-    <div class="col-md-4 mb-4">
-      <img src="elders indic artwork3.png" class="img-fluid kids-img">
-      <h5 class="mt-2 text-center" style="color: #5a1e00;">Indic Calligraphy</h5>
-      <p class="text-center" style="color: #5a1e00;">
-        This artwork showcases vibrant Indic calligraphy displaying “सुख” (Happiness) with an ornate colorful frame, golden flourishes, and decorative floral elements to represent joy and positivity.
-      </p>
+    <div class="col-lg-4 col-md-6">
+      <div class="artwork-card">
+        <img src="elders indic artwork3.png" class="artwork-img" alt="Sukh Happiness Ornate Frame">
+        <h5 class="artwork-title">Sukh (Happiness) Ornate Frame</h5>
+        <p class="artwork-desc">
+          Vibrant Indic calligraphy displaying “सुख” (Happiness) with an ornate colorful frame, golden flourishes, and decorative floral elements to represent joy and positivity.
+        </p>
+      </div>
     </div>
 
-    <div class="col-md-4 mb-4">
-      <img src="elders indic artwork4.png" class="img-fluid kids-img">
-      <h5 class="mt-2 text-center" style="color: #5a1e00;">Indic Calligraphy</h5>
-      <p class="text-center" style="color: #5a1e00;">
-        This artwork showcases elegant Indic calligraphy of “शुभ” (Good Fortune) highlighted with traditional Indian patterns, paisley borders, golden detailing, and warm floral artwork.
-      </p>
+    <div class="col-lg-4 col-md-6">
+      <div class="artwork-card">
+        <img src="elders indic artwork4.png" class="artwork-img" alt="Shubh Good Fortune Paisley">
+        <h5 class="artwork-title">Shubh (Good Fortune) Paisley</h5>
+        <p class="artwork-desc">
+          Elegant Indic calligraphy of “शुभ” (Good Fortune) highlighted with traditional Indian patterns, paisley borders, golden detailing, and warm floral artwork.
+        </p>
+      </div>
     </div>
 
-    <div class="col-md-4 mb-4">
-      <img src="elders indic artwork5.png" class="img-fluid kids-img">
-      <h5 class="mt-2 text-center" style="color: #5a1e00;">Indic Calligraphy</h5>
-      <p class="text-center" style="color: #5a1e00;">
-        TThis artwork showcases classic Indic calligraphy featuring the word “धन्य” (Grateful/Blessed) in a neat artistic font, surrounded by delicate flowers and decorative borders for a traditional feel.
-      </p>
+    <div class="col-lg-4 col-md-6">
+      <div class="artwork-card">
+        <img src="elders indic artwork5.png" class="artwork-img" alt="Dhanya Grateful Bordered Script">
+        <h5 class="artwork-title">Dhanya (Blessed) Bordered Script</h5>
+        <p class="artwork-desc">
+          Classic Indic calligraphy featuring the word “धन्य” (Grateful / Blessed) in a neat artistic font, surrounded by delicate flowers and decorative borders for a traditional feel.
+        </p>
+      </div>
     </div>
 
-    <div class="col-md-4 mb-4">
-      <img src="elders indic artwork6.png" class="img-fluid kids-img">
-      <h5 class="mt-2 text-center" style="color: #5a1e00;">Indic Calligraphy</h5>
-      <p class="text-center" style="color: #5a1e00;">
-        This artwork showcases traditional Indic calligraphy with the word “आनंद” (Bliss) written in stylish strokes, enhanced with floral decorations and golden accents for a peaceful and elegant design.
-      </p>
+    <div class="col-lg-4 col-md-6">
+      <div class="artwork-card">
+        <img src="elders indic artwork6.png" class="artwork-img" alt="Anand Bliss Floral Flourish">
+        <h5 class="artwork-title">Anand (Bliss) Floral Flourish</h5>
+        <p class="artwork-desc">
+          Traditional Indic calligraphy with the word “आनंद” (Bliss) written in stylish strokes, enhanced with floral decorations and golden accents for a peaceful and elegant design.
+        </p>
+      </div>
     </div>
   </div>
-   </div>
-      </section>
+</section>
 
-    <!-- FOOTER -->
+<!-- FOOTER -->
 <footer>
-<div class="container">
-  <div class="footer-container">
-    <div class="footer-logo">
-      <h3>Calligraphy Art</h3>
-    <p>Your gateway to the beautiful art of calligraphy. Learn, practice, and master the skills to create stunning handwritten art.</p>
-  </div>
-  <div class="footer-links">
-    <h4> Quick Links</h4>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="catogries.html">Categories</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="feedback.html">Feedback</a></li>     
-    </ul>
-    
-  </div>
-  <div class="footer-social">
-    <h4>Follow Us</h4>
-    <div class="social-icons">
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-pinterest"></i></a>
-      <a href="#"><i class="fab fa-youtube"></i></a>
+  <div class="container">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <h3>Calligraphy Art</h3>
+        <p>Your gateway to the beautiful art of calligraphy. Learn, practice, and master the skills to create stunning handwritten art.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catogries.html">Categories</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="feedback.html">Feedback</a></li>     
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2026 Calligraphy Art | All Rights Reserved By Muhammad Maaz</p>
     </div>
   </div>
-</div>
-</div>
-<div class="copyright">
-  <p>&copy; 2026 Calligraphy Art | All Rights Reserved By Muhammad Maaz</p>
-</div>
 </footer>
+
+<!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>

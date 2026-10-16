@@ -1,26 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calligrahy Art</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calligraphy Art | Categories</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg custom-navbar navbar-dark">
-  <div class="container-fluid">
-    <i class="fas fa-pen-nib"></i>
-    <a class="navbar-brand d-flex align-items-center" href="index.html">
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg custom-navbar navbar-dark sticky-top">
+  <div class="container-fluid px-lg-4">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+      <i class="fas fa-pen-nib brand-icon"></i>
       <span>Calligraphy Art</span>
     </a>
 
-    <div class="collapse navbar-collapse justify-content-center">
-      <ul class="navbar-nav gap-4">
+    <!-- Responsive Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
+      <ul class="navbar-nav gap-2 gap-lg-3">
         <li class="nav-item"><a class="nav-link px-3" href="index.html">Home</a></li>
         <li class="nav-item dropdown">
-          <a class="nav-link px-3 dropdown-toggle" href="#" data-bs-toggle="dropdown">Categories</a>
+          <a class="nav-link px-3 dropdown-toggle active" href="#" data-bs-toggle="dropdown">Categories</a>
           <ul class="dropdown-menu">
+            <li><a class="dropdown-item fw-bold active" href="catogries.html"><i class="fas fa-th-large me-2"></i>All Categories</a></li>
+            <li><hr class="dropdown-divider border-secondary my-1"></li>
             <li class="dropdown-submenu">
               <a class="dropdown-item dropdown-toggle" href="#">For Kids</a>
               <ul class="dropdown-menu">
@@ -37,16 +59,219 @@
                 <li><a class="dropdown-item" href="elders-indic.html">Indic</a></li>
               </ul>
             </li>
-
           </ul>
         </li>
 
         <li class="nav-item"><a class="nav-link px-3" href="gallery.html">Gallery</a></li>
-        <li class="nav-item"><a class="nav-link px-3 active" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link px-3" href="contact.html">Contact</a></li>
         <li class="nav-item"><a class="nav-link px-3" href="feedback.html">Feedback</a></li>
       </ul>
     </div>
   </div>
 </nav>
+
+<!-- CATEGORIES HERO BANNER -->
+<section class="categories-hero">
+  <div class="categories-hero-overlay">
+    <h1>Calligraphy Categories</h1>
+    <p>Discover carefully curated calligraphy journeys tailored for young learners and mature artists</p>
+  </div>
+</section>
+
+<!-- MAIN CATEGORIES CONTAINER -->
+<main class="container my-5 pt-4">
+
+  <!-- SECTION 1: FOR KIDS -->
+  <section class="category-block mb-5">
+    <div class="category-block-header">
+      <span class="category-badge"><i class="fas fa-child me-1"></i> Youth & Beginners</span>
+      <h2 style="color: var(--primary);">Calligraphy For Kids</h2>
+      <p style="color: var(--text-body); font-size: 1.1rem;">
+        Playful, engaging, and easy-to-learn modules designed to foster handwriting confidence, fine motor skills, and creative imagination in children.
+      </p>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+      <!-- Kids Arabic -->
+      <div class="col-lg-4 col-md-6">
+        <div class="category-card">
+          <div class="category-card-img-wrap">
+            <img src="kids arabic artwork 1.png" alt="Kids Arabic Calligraphy">
+          </div>
+          <div class="category-card-body">
+            <h3 class="category-card-title">Kids Arabic Calligraphy</h3>
+            <p class="category-card-text">
+              Fun basic strokes, joyful name writing, and decorative Quranic script patterns customized for easy young learning.
+            </p>
+            <a href="kids-arabic.html" class="category-card-btn">
+              Explore Kids Arabic <i class="fas fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kids Greek -->
+      <div class="col-lg-4 col-md-6">
+        <div class="category-card">
+          <div class="category-card-img-wrap">
+            <img src="kids greek artwork  1.png" alt="Kids Greek Calligraphy">
+          </div>
+          <div class="category-card-body">
+            <h3 class="category-card-title">Kids Greek Calligraphy</h3>
+            <p class="category-card-text">
+              Explore ancient Greek letters, whimsical doodle patterns, and colorful artwork celebrating friendship and summer.
+            </p>
+            <a href="kids-greek.html" class="category-card-btn">
+              Explore Kids Greek <i class="fas fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kids Indic -->
+      <div class="col-lg-4 col-md-6">
+        <div class="category-card">
+          <div class="category-card-img-wrap">
+            <img src="kids indic artwork 1.png" alt="Kids Indic Calligraphy">
+          </div>
+          <div class="category-card-body">
+            <h3 class="category-card-title">Kids Indic Calligraphy</h3>
+            <p class="category-card-text">
+              Engage with vibrant Devanagari and regional scripts through playful headings, festive cards, and confident line work.
+            </p>
+            <a href="kids-indic.html" class="category-card-btn">
+              Explore Kids Indic <i class="fas fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: FOR ELDERS -->
+  <section class="category-block mb-5">
+    <div class="category-block-header">
+      <span class="category-badge"><i class="fas fa-feather-alt me-1"></i> Classical & Mindful</span>
+      <h2 style="color: var(--primary);">Calligraphy For Elders</h2>
+      <p style="color: var(--text-body); font-size: 1.1rem;">
+        A serene artistic path focusing on patience, cognitive wellness, and traditional craftsmanship through time-honored scripts.
+      </p>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+      <!-- Elders Arabic -->
+      <div class="col-lg-4 col-md-6">
+        <div class="category-card">
+          <div class="category-card-img-wrap">
+            <img src="elders arabic calligraphy.png" alt="Elders Arabic Calligraphy">
+          </div>
+          <div class="category-card-body">
+            <h3 class="category-card-title">Elders Arabic Calligraphy</h3>
+            <p class="category-card-text">
+              Delve into Kufic, Thuluth, and Naskh scripts that preserve spiritual heritage, dignity, and classical manuscript poise.
+            </p>
+            <a href="elders-arabic.html" class="category-card-btn">
+              Explore Elders Arabic <i class="fas fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Elders Greek -->
+      <div class="col-lg-4 col-md-6">
+        <div class="category-card">
+          <div class="category-card-img-wrap">
+            <img src="elders greek calligraphy.png" alt="Elders Greek Calligraphy">
+          </div>
+          <div class="category-card-body">
+            <h3 class="category-card-title">Elders Greek Calligraphy</h3>
+            <p class="category-card-text">
+              Master the harmonic proportions of classical Hellenic lettering and Byzantine manuscripts for peaceful artistic focus.
+            </p>
+            <a href="elders-greek.html" class="category-card-btn">
+              Explore Elders Greek <i class="fas fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Elders Indic -->
+      <div class="col-lg-4 col-md-6">
+        <div class="category-card">
+          <div class="category-card-img-wrap">
+            <img src="elders indic caligraphy.png" alt="Elders Indic Calligraphy">
+          </div>
+          <div class="category-card-body">
+            <h3 class="category-card-title">Elders Indic Calligraphy</h3>
+            <p class="category-card-text">
+              Experience the rhythmic flow of Devanagari and Sanskrit scriptures enhanced with traditional floral borders and gold leaf.
+            </p>
+            <a href="elders-indic.html" class="category-card-btn">
+              Explore Elders Indic <i class="fas fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="my-5">
+    <div class="cta-container">
+      <h2 class="cta-heading">Ready to Begin Your Calligraphy Journey?</h2>
+      <p class="cta-paragraph">
+        Whether you are introducing your children to expressive handwriting or seeking a calm, creative practice as an adult, our studio offers guided guidance every step of the way.
+      </p>
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <a href="gallery.html" class="cta-btn">
+          <i class="fas fa-images me-2"></i>View Artwork Gallery
+        </a>
+        <a href="contact.html" class="cta-btn" style="background: var(--primary-light);">
+          <i class="fas fa-envelope me-2"></i>Enroll for Classes
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <h3>Calligraphy Art</h3>
+        <p>Your gateway to the beautiful art of calligraphy. Learn, practice, and master the skills to create stunning handwritten art.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catogries.html">Categories</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="feedback.html">Feedback</a></li>     
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2026 Calligraphy Art | All Rights Reserved By Muhammad Maaz</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

@@ -3,43 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calligraphy Art</title>
+  <title>Calligraphy Art | Master Traditional & Modern Calligraphy</title>
 
-  <!-- Bootstrap -->
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Leaflet -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
-  <!-- Social Icons CDN -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </head>
 
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg custom-navbar navbar-dark">
-  <div class="container-fluid">
-    <i class="fas fa-pen-nib"></i>
-    <a class="navbar-brand d-flex align-items-center" href="index.html">
+<nav class="navbar navbar-expand-lg custom-navbar navbar-dark sticky-top">
+  <div class="container-fluid px-lg-4">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+      <i class="fas fa-pen-nib brand-icon"></i>
       <span>Calligraphy Art</span>
     </a>
 
-     <!-- RESponvie -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse">
+    <!-- Responsive Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-
-    <div class="collapse navbar-collapse justify-content-center">
-      <ul class="navbar-nav gap-4">
-        <li class="nav-item"><a class="nav-link px-3" href="index.html">Home</a></li>
+    <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
+      <ul class="navbar-nav gap-2 gap-lg-3">
+        <li class="nav-item"><a class="nav-link px-3 active" href="index.html">Home</a></li>
         <li class="nav-item dropdown">
           <a class="nav-link px-3 dropdown-toggle" href="#" data-bs-toggle="dropdown">Categories</a>
           <ul class="dropdown-menu">
+            <li><a class="dropdown-item fw-bold" href="catogries.html"><i class="fas fa-th-large me-2"></i>All Categories</a></li>
+            <li><hr class="dropdown-divider border-secondary my-1"></li>
             <li class="dropdown-submenu">
               <a class="dropdown-item dropdown-toggle" href="#">For Kids</a>
               <ul class="dropdown-menu">
@@ -56,29 +59,29 @@
                 <li><a class="dropdown-item" href="elders-indic.html">Indic</a></li>
               </ul>
             </li>
-
           </ul>
         </li>
 
         <li class="nav-item"><a class="nav-link px-3" href="gallery.html">Gallery</a></li>
-        <li class="nav-item"><a class="nav-link px-3 active" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link px-3" href="contact.html">Contact</a></li>
         <li class="nav-item"><a class="nav-link px-3" href="feedback.html">Feedback</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
+<!-- BANNER -->
+<section id="home" class="images">
+  <img src="Banner 1.png" alt="Calligraphy Art Banner">
+  <a href="#about" class="scroll-btn">
+    <i class="fas fa-arrow-down"></i>
+    <span>Explore Calligraphy</span>
+  </a>
+</section>
 
-  <!-- Banner -->
-  <section id="home" class="images">
-    <img src="Banner 1.png" alt="Calligraphy Banner">
-    <a href="#about" class="scroll-btn">Explore Calligraphy</a>
-  </section>
-
-
-  <!-- ABOUT SECTION -->
-  <section id="about" class="about">
-
+<!-- ABOUT SECTION -->
+<section id="about" class="about">
+  <div class="container">
     <h2>About Calligraphy</h2>
 
     <p class="about-intro">
@@ -96,7 +99,7 @@
       </div>
 
       <div class="image-box">
-        <img src="Arabic calligraphy.png" alt="Arabic Calligraphy">
+        <img src="Arabic calligraphy.png" alt="Arabic Calligraphy Artwork">
       </div>
     </div>
 
@@ -110,7 +113,7 @@
       </div>
 
       <div class="image-box">
-        <img src="Greek calligraphy.png" alt="Greek Calligraphy">
+        <img src="Greek calligraphy.png" alt="Greek Calligraphy Artwork">
       </div>
     </div>
 
@@ -124,52 +127,49 @@
       </div>
 
       <div class="image-box">
-        <img src="Indic calligraphy.png" alt="Indic Calligraphy">
+        <img src="Indic calligraphy.png" alt="Indic Calligraphy Artwork">
       </div>
     </div>
+  </div>
+</section>
 
-  </section>
-
-  
 <!-- FOOTER -->
 <footer>
-<div class="container">
-  <div class="footer-container">
-    <div class="footer-logo">
-      <h3>Calligraphy Art</h3>
-    <p>Your gateway to the beautiful art of calligraphy. Learn, practice, and master the skills to create stunning handwritten art.</p>
-  </div>
-  <div class="footer-links">
-    <h4> Quick Links</h4>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="catogries.html">Categories</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="feedback.html">Feedback</a></li>     
-    </ul>
-    
-  </div>
-  <div class="footer-social">
-    <h4>Follow Us</h4>
-    <div class="social-icons">
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-pinterest"></i></a>
-      <a href="#"><i class="fab fa-youtube"></i></a>
+  <div class="container">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <h3>Calligraphy Art</h3>
+        <p>Your gateway to the beautiful art of calligraphy. Learn, practice, and master the skills to create stunning handwritten art.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catogries.html">Categories</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="feedback.html">Feedback</a></li>     
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2026 Calligraphy Art | All Rights Reserved By Muhammad Maaz</p>
     </div>
   </div>
-</div>
-</div>
-<div class="copyright">
-  <p>&copy; 2026 Calligraphy Art | All Rights Reserved By Muhammad Maaz</p>
-</div>
 </footer>
 
-<!-- Scripts -->
+<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
 
 </body>
 </html>

@@ -1,43 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calligraphy Art</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calligraphy Art | Artwork Gallery</title>
 
-    <link rel="stylesheet" href="style.css" />
-    <style>
-      
-    </style>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"/>
-      <!-- Social Icons CDN -->
-       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-      </head>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
 
-  <body>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Custom CSS (Loaded after Bootstrap to preserve design hierarchy) -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg custom-navbar navbar-dark">
-  <div class="container-fluid">
-    <i class="fas fa-pen-nib"></i>
-    <a class="navbar-brand d-flex align-items-center" href="index.html">
+<nav class="navbar navbar-expand-lg custom-navbar navbar-dark sticky-top">
+  <div class="container-fluid px-lg-4">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+      <i class="fas fa-pen-nib brand-icon"></i>
       <span>Calligraphy Art</span>
     </a>
-    <!-- RESponvie -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse">
+
+    <!-- Responsive Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-
-    <div class="collapse navbar-collapse justify-content-center">
-      <ul class="navbar-nav gap-4">
+    <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
+      <ul class="navbar-nav gap-2 gap-lg-3">
         <li class="nav-item"><a class="nav-link px-3" href="index.html">Home</a></li>
         <li class="nav-item dropdown">
           <a class="nav-link px-3 dropdown-toggle" href="#" data-bs-toggle="dropdown">Categories</a>
           <ul class="dropdown-menu">
+            <li><a class="dropdown-item fw-bold" href="catogries.html"><i class="fas fa-th-large me-2"></i>All Categories</a></li>
+            <li><hr class="dropdown-divider border-secondary my-1"></li>
             <li class="dropdown-submenu">
               <a class="dropdown-item dropdown-toggle" href="#">For Kids</a>
               <ul class="dropdown-menu">
@@ -54,152 +59,158 @@
                 <li><a class="dropdown-item" href="elders-indic.html">Indic</a></li>
               </ul>
             </li>
-
           </ul>
         </li>
 
-        <li class="nav-item"><a class="nav-link px-3" href="gallery.html">Gallery</a></li>
-        <li class="nav-item"><a class="nav-link px-3 active" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link px-3 active" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link px-3" href="contact.html">Contact</a></li>
         <li class="nav-item"><a class="nav-link px-3" href="feedback.html">Feedback</a></li>
       </ul>
     </div>
   </div>
 </nav>
-    <!-- banner section -->
-    <div class="gallery">
-      <!-- <img src="Gallery banner 2.png" alt=""> -->
+
+<!-- BANNER SECTION -->
+<section class="gallery">
+  <div class="gallery-hero-overlay">
+    <h1>Timeless Calligraphy Gallery</h1>
+    <p>A curated exhibition of classical Arabic, Greek, and Indic scripts crafted by master calligraphers</p>
+  </div>
+</section>
+
+<!-- GALLERY SECTION -->
+<section class="container my-5">
+  <div class="text-center mb-5">
+    <span class="category-badge"><i class="fas fa-paint-brush me-1"></i> Featured Works</span>
+    <h2 style="color: var(--primary);">Our Masterpiece Collection</h2>
+    <p style="color: var(--text-body); max-width: 700px; margin: 10px auto 0 auto; font-size: 1.1rem;">
+      Each piece represents disciplined practice, traditional tools, and rich cultural heritage handed down through generations.
+    </p>
+  </div>
+
+  <div class="row g-4">
+    <!-- Arabic 1 -->
+    <div class="col-lg-4 col-md-6">
+      <div class="artwork-card">
+        <img src="Gallery-arabic 1.png" class="artwork-img" alt="Arabic Calligraphy Artwork" />
+        <h5 class="artwork-title">Arabic Calligraphy</h5>
+        <p class="artwork-desc">
+          This collection showcases traditional Arabic scripts created using classical reeds, walnut ink, and centuries-old geometric principles.
+        </p>
+      </div>
     </div>
 
-    <!-- GALLERY SECTION -->
-    <section class="container my-5">
-      <h2 class="text-center cta-heading mb-4" style="color: #5a1e00">
-        Our Artwork Collection
-      </h2>
-
-      <div class="row">
-        <!-- Arabic -->
-        <div class="col-md-4 mb-4">
-          <img src="Gallery-arabic 1.png" class="img-fluid gallery-img" />
-          <h5 class="mt-2 text-center" style="color: #5a1e00">
-            Arabic Calligraphy
-          </h5>
-          <p style="text-align: center; color: #5a1e00">
-            This collection showcases traditional Arabic scripts created using
-            classical tools and techniques.
-          </p>
-        </div>
-
-        <div class="col-md-4 mb-4">
-          <img src="Gallery-arabic 2.png" class="img-fluid gallery-img" />
-          <h5 class="mt-2 text-center" style="color: #5a1e00">
-            Arabic Manuscript
-          </h5>
-          <p style="text-align: center; color: #5a1e00">
-            An Arabic Manuscript is a handwritten text featuring beautiful,
-            flowing Arabic calligraphy.
-          </p>
-        </div>
-
-        <!-- Greek -->
-        <div class="col-md-4 mb-4">
-          <img src="Gallery-greek.png" class="img-fluid gallery-img" />
-          <h5 class="mt-2 text-center" style="color: #5a1e00">
-            Greek Calligraphy
-          </h5>
-          <p style="text-align: center; color: #5a1e00">
-            Greek calligraphy is the artistic and elegant writing of Greek
-            letters.
-          </p>
-        </div>
-
-        <!-- Indic -->
-        <div class="col-md-4 mb-4">
-          <img src="Gallery-indic 1.png" class="img-fluid gallery-img" />
-          <h5 class="mt-2 text-center" style="color: #5a1e00">
-            Indic Calligraphy
-          </h5>
-          <p style="text-align: center; color: #5a1e00">
-            Indic calligraphy is the artistic writing of Indian scripts, known
-            for graceful strokes and decorative forms.
-          </p>
-        </div>
-
-        <div class="col-md-4 mb-4">
-          <img src="Gallery-indic 2.png" class="img-fluid gallery-img" />
-          <h5 class="mt-2 text-center" style="color: #5a1e00">
-            Devanagari Script
-          </h5>
-          <p style="text-align: center; color: #5a1e00">
-            The Devanagari script is an ancient Indian writing system recognized
-            by its horizontal headline and clear, structured letterforms.
-          </p>
-        </div>
-
-        <!-- Practice -->
-        <div class="col-md-4 mb-4">
-          <img
-            src="Gallery practice and tools.png"
-            class="img-fluid gallery-img"
-          />
-          <h5 class="mt-2 text-center" style="color: #5a1e00">
-            Practice & Tools
-          </h5>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA SECTION -->
-    <section class="my-5">
-      <div class="cta-container">
-        <h1 class="cta-heading">Inspired by Our Calligraphy?</h1>
-        <p class="cta-paragraph">
-          Begin your journey into the art of beautiful writing and experience
-          the calm and creativity of traditional calligraphy.
+    <!-- Arabic 2 -->
+    <div class="col-lg-4 col-md-6">
+      <div class="artwork-card">
+        <img src="Gallery-arabic 2.png" class="artwork-img" alt="Arabic Manuscript" />
+        <h5 class="artwork-title">Arabic Manuscript</h5>
+        <p class="artwork-desc">
+          An exquisite handwritten text featuring flowing, rhythmic Arabic calligraphy adorned with traditional illumination borders.
         </p>
-        <div class="cta-btn-container">
-          <a href="contact.html">
-          <button class="cta-btn">Enroll for classes</button>
-          </a>
-        </div>
       </div>
-    </section>
+    </div>
+
+    <!-- Greek -->
+    <div class="col-lg-4 col-md-6">
+      <div class="artwork-card">
+        <img src="Gallery-greek.png" class="artwork-img" alt="Greek Calligraphy" />
+        <h5 class="artwork-title">Greek Calligraphy</h5>
+        <p class="artwork-desc">
+          Artistic and elegant writing of classical Greek letterforms, reflecting ancient epigraphy and Byzantine parchment traditions.
+        </p>
+      </div>
+    </div>
+
+    <!-- Indic 1 -->
+    <div class="col-lg-4 col-md-6">
+      <div class="artwork-card">
+        <img src="Gallery-indic 1.png" class="artwork-img" alt="Indic Calligraphy" />
+        <h5 class="artwork-title">Indic Calligraphy</h5>
+        <p class="artwork-desc">
+          Artistic writing of ancient Indian scripts, celebrated for graceful horizontal headlines, curved flourishes, and decorative forms.
+        </p>
+      </div>
+    </div>
+
+    <!-- Indic 2 -->
+    <div class="col-lg-4 col-md-6">
+      <div class="artwork-card">
+        <img src="Gallery-indic 2.png" class="artwork-img" alt="Devanagari Script" />
+        <h5 class="artwork-title">Devanagari Script</h5>
+        <p class="artwork-desc">
+          An ancient and revered Indian writing system recognized by its structured letter balance, spiritual depth, and rhythmic pen strokes.
+        </p>
+      </div>
+    </div>
+
+    <!-- Practice & Tools -->
+    <div class="col-lg-4 col-md-6">
+      <div class="artwork-card">
+        <img src="Gallery practice and tools.png" class="artwork-img" alt="Practice & Calligraphy Tools" />
+        <h5 class="artwork-title">Practice & Tools</h5>
+        <p class="artwork-desc">
+          The essential instruments of the craft: hand-cut bamboo reed pens, organic inks, brass nibs, and guided stroke practice parchment.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="my-5">
+  <div class="container">
+    <div class="cta-container">
+      <h2 class="cta-heading">Inspired by Our Calligraphy?</h2>
+      <p class="cta-paragraph">
+        Begin your personal journey into the art of beautiful writing and experience the calm, focus, and creativity of traditional hand lettering.
+      </p>
+      <div class="cta-btn-container">
+        <a href="contact.html" class="cta-btn">
+          <i class="fas fa-pen-nib me-2"></i>Enroll for Classes
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- FOOTER -->
 <footer>
-<div class="container">
-  <div class="footer-container">
-    <div class="footer-logo">
-      <h3>Calligraphy Art</h3>
-    <p>Your gateway to the beautiful art of calligraphy. Learn, practice, and master the skills to create stunning handwritten art.</p>
-  </div>
-  <div class="footer-links">
-    <h4> Quick Links</h4>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="catogries.html">Categories</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="feedback.html">Feedback</a></li>     
-    </ul>
-    
-  </div>
-  <div class="footer-social">
-    <h4>Follow Us</h4>
-    <div class="social-icons">
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-pinterest"></i></a>
-      <a href="#"><i class="fab fa-youtube"></i></a>
+  <div class="container">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <h3>Calligraphy Art</h3>
+        <p>Your gateway to the beautiful art of calligraphy. Learn, practice, and master the skills to create stunning handwritten art.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catogries.html">Categories</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="feedback.html">Feedback</a></li>     
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2026 Calligraphy Art | All Rights Reserved By Muhammad Maaz</p>
     </div>
   </div>
-</div>
-</div>
-<div class="copyright">
-  <p>&copy; 2026 Calligraphy Art | All Rights Reserved By Muhammad Maaz</p>
-</div>
 </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
 </html>

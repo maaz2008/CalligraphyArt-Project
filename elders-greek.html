@@ -3,40 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calligraphy Art</title>
+  <title>Calligraphy Art | Elders Greek Calligraphy</title>
 
-  <!-- Bootstrap -->
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Leaflet -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
-  <!-- Social Icons CDN -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </head>
 
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg custom-navbar navbar-dark">
-  <div class="container-fluid">
-    <i class="fas fa-pen-nib"></i>
-    <a class="navbar-brand d-flex align-items-center" href="index.html">
+<nav class="navbar navbar-expand-lg custom-navbar navbar-dark sticky-top">
+  <div class="container-fluid px-lg-4">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+      <i class="fas fa-pen-nib brand-icon"></i>
       <span>Calligraphy Art</span>
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse">
-  <span class="navbar-toggler-icon"></span>
-</button>
 
-    <div class="collapse navbar-collapse justify-content-center">
-      <ul class="navbar-nav gap-4">
+    <!-- Responsive Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
+      <ul class="navbar-nav gap-2 gap-lg-3">
         <li class="nav-item"><a class="nav-link px-3" href="index.html">Home</a></li>
         <li class="nav-item dropdown">
-          <a class="nav-link px-3 dropdown-toggle" href="#" data-bs-toggle="dropdown">Categories</a>
+          <a class="nav-link px-3 dropdown-toggle active" href="#" data-bs-toggle="dropdown">Categories</a>
           <ul class="dropdown-menu">
+            <li><a class="dropdown-item fw-bold" href="catogries.html"><i class="fas fa-th-large me-2"></i>All Categories</a></li>
+            <li><hr class="dropdown-divider border-secondary my-1"></li>
             <li class="dropdown-submenu">
               <a class="dropdown-item dropdown-toggle" href="#">For Kids</a>
               <ul class="dropdown-menu">
@@ -46,164 +52,196 @@
               </ul>
             </li>
             <li class="dropdown-submenu">
-              <a class="dropdown-item dropdown-toggle" href="#">For Elders</a>
+              <a class="dropdown-item dropdown-toggle active" href="#">For Elders</a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="elders-arabic.html">Arabic</a></li>
-                <li><a class="dropdown-item" href="elders-greek.html">Greek</a></li>
+                <li><a class="dropdown-item active" href="elders-greek.html">Greek</a></li>
                 <li><a class="dropdown-item" href="elders-indic.html">Indic</a></li>
               </ul>
             </li>
-
           </ul>
         </li>
 
         <li class="nav-item"><a class="nav-link px-3" href="gallery.html">Gallery</a></li>
-        <li class="nav-item"><a class="nav-link px-3 active" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link px-3" href="contact.html">Contact</a></li>
         <li class="nav-item"><a class="nav-link px-3" href="feedback.html">Feedback</a></li>
       </ul>
     </div>
   </div>
 </nav>
+
 <!-- ELDERS BANNER -->
 <section class="eldersbanner">
-  <div>
-    <div class="eldersheading">
-      <img src="Elders Banner 2.png" alt="">
-    </div>
-    <h1>Calligraphy for Elders</h1>
+  <img src="Elders Banner 2.png" alt="Calligraphy for Elders Banner">
+  <div class="banner-overlay">
+    <h1 class="fw-bold">Elders Greek Calligraphy</h1>
     <p>A calm and meaningful journey into the art of beautiful writing</p>
   </div>
 </section>
 
 <!-- ABOUT SECTION -->
-  <section id="about" class="about">
-    <div class="about-container">
-
+<section id="about" class="elders-calligraphy-about">
+  <div class="elders-about-card">
+    <span class="category-badge"><i class="fas fa-feather-alt me-1"></i> Timeless Art & Mindfulness</span>
     <h2>About Elders Calligraphy</h2>
-    <p class="about-intro">
+    <p>
       Calligraphy for elders focuses on patience, creativity, and mental relaxation.
-      It helps improve focus, fine motor skills, and keeps the mind active through traditional art
+      It helps improve focus, fine motor skills, and keeps the mind active through traditional art.
     </p>
-    <!-- ABOUT ELDERS GREEK CALLIGRAPHY -->
-     <h2>Elders Greek Calligraphy</h2>
-     <p>
-Elders Greek calligraphy means Greek calligraphy artwork that honors and respects elderly people, using beautiful Greek lettering to write messages, blessings, or quotes about seniors—such as wisdom, dignity, long life, and gratitude.
-</p>
-</div>
+
+    <div class="elders-divider"></div>
+
+    <h2>Elders Greek Calligraphy</h2>
+    <p>
+      Elders Greek calligraphy honors ancient philosophical and Byzantine writing traditions. By practicing harmonic letter geometry and classical Greek lettering, senior practitioners cultivate long-lasting manual precision, peaceful mindfulness, and an enduring appreciation for historical Hellenic culture.
+    </p>
+  </div>
 </section>
-     <!-- PRACTICE -->
-      <section class="container my-5 text-center">
-        <h2 style="color: #5a1e00;">Practice Work</h2>
-        <div class="row justify-content-center mt-4">
-    <!-- Greek -->
-    <div class="col-md-4 mb-4">
-      <img src="elders arabic practice 1.png" class="img-fluid rounded shadow">
-      <h4 class="mt-3 arabic-title">Arabic Calligraphy</h4>
+
+<!-- PRACTICE WORK -->
+<section class="container my-5 text-center">
+  <span class="category-badge"><i class="fas fa-pencil-alt me-1"></i> Foundation Exercises</span>
+  <h2 style="color: var(--primary); margin-bottom: 30px;">Practice Work & Studies</h2>
+
+  <div class="row justify-content-center g-4">
+    <!-- Greek Practice 1 -->
+    <div class="col-lg-4 col-md-6">
+      <div class="practice-card">
+        <img src="Greek calligraphy practice.png" alt="Greek Alphabet & Lettering Practice">
+        <h4 class="greek-title">Greek Alphabet Practice</h4>
+        <p class="text-muted small mt-2 mb-0">Harmonic proportions, uppercase uncials, and rhythm.</p>
+      </div>
     </div>
 
-    <div class="col-md-4 mb-4">
-      <img src="elders arabic practice 2.png" class="img-fluid rounded shadow">
-      <h4 class="mt-3 arabic-title">Arabic Calligraphy</h4>
+    <!-- Greek Practice 2 -->
+    <div class="col-lg-4 col-md-6">
+      <div class="practice-card">
+        <img src="Greek calligraphy.png" alt="Classical Greek Lettering">
+        <h4 class="greek-title">Classical Hellenic Lettering</h4>
+        <p class="text-muted small mt-2 mb-0">Pen angle balance, serif terminations, and line continuity.</p>
+      </div>
     </div>
 
-    <div class="col-md-4 mb-4">
-      <img src="elders arabic practice 3.png" class="img-fluid rounded shadow">
-      <h4 class="mt-3 arabic-title">Arabic Calligraphy</h4>
-    </div>
-  </div>
-      </section>
-      
-
-   <!-- GREEK ARTWORK -->
-  <h1 style="color: #5a1e00; text-align: center; margin-top: 20px; font-family: Georgia, 'Times New Roman', Times, serif;">Elders Arabic Artwork</h1>
-   <div class="container">
-  <div class="row">
-
-    <div class="col-md-4 mb-4">
-      <img src="elders greek artwork1.png" class="img-fluid kids-img">
-      <h5 class="mt-2 text-center" style="color: #5a1e00;">Arabic Calligraphy</h5>
-      <p class="text-center" style="color: #5a1e00;">
-        This artwork showcases elegant Greek calligraphy featuring the word “αγάπη” (Love) written repeatedly in smooth black ink strokes to practice letter flow and consistency.
-      </p>
-    </div>
-
-    <div class="col-md-4 mb-4">
-      <img src="elders greek artwork2.png" class="img-fluid kids-img">
-      <h5 class="mt-2 text-center" style="color: #5a1e00;">Arabic Manuscript</h5>
-      <p class="text-center" style="color: #5a1e00;">
-        This artwork showcases traditional Greek calligraphy practice sheets with the word “ελπίδα” (Hope) written in multiple styles, showing different stroke thickness and neat spacing.
-      </p>
-    </div>
-
-    <div class="col-md-4 mb-4">
-      <img src="elders greek artwork3.png" class="img-fluid kids-img">
-      <h5 class="mt-2 text-center" style="color: #5a1e00;">Arabic Calligraphy</h5>
-      <p class="text-center" style="color: #5a1e00;">
-        This artwork showcases Greek calligraphy practice work featuring “σοφία” (Wisdom) written repeatedly in clean lettering, highlighting balance, symmetry, and beautiful handwriting.
-      </p>
-    </div>
-
-    <div class="col-md-4 mb-4">
-      <img src="eledrs greek artwork4.png" class="img-fluid kids-img">
-      <h5 class="mt-2 text-center" style="color: #5a1e00;">Arabic Calligraphy</h5>
-      <p class="text-center" style="color: #5a1e00;">
-        This artwork showcases Greek calligraphy practice sheets with the word “χαρά” (Joy) written in artistic strokes, giving a calm and classic handwritten look.
-      </p>
-    </div>
-
-    <div class="col-md-4 mb-4">
-      <img src="elders greek artwork5.png" class="img-fluid kids-img">
-      <h5 class="mt-2 text-center" style="color: #5a1e00;">Arabic Calligraphy</h5>
-      <p class="text-center" style="color: #5a1e00;">
-        This artwork showcases decorative calligraphy practice written as “Mon Amour” in a stylish script font, created on vintage paper with traditional ink tools for an elegant aesthetic.
-      </p>
-    </div>
-
-    <div class="col-md-4 mb-4">
-      <img src="elders greek artwork6.png" class="img-fluid kids-img">
-      <h5 class="mt-2 text-center" style="color: #5a1e00;">Arabic Calligraphy</h5>
-      <p class="text-center" style="color: #5a1e00;">
-        This artwork showcases traditional Greek calligraphy practice featuring the word “ειρήνη” (Peace) written in smooth black ink with repeated strokes, focusing on neat letter formation, spacing, and elegant handwriting style.
-      </p>
+    <!-- Greek Practice 3 -->
+    <div class="col-lg-4 col-md-6">
+      <div class="practice-card">
+        <img src="elders greek calligraphy.png" alt="Byzantine & Hellenic Script">
+        <h4 class="greek-title">Byzantine Script Flow</h4>
+        <p class="text-muted small mt-2 mb-0">Fluid cursive ligatures and manuscript ornamentation.</p>
+      </div>
     </div>
   </div>
-</div>
+</section>
 
-    <!-- FOOTER -->
+<!-- GREEK ARTWORK -->
+<section class="container my-5">
+  <div class="text-center mb-4">
+    <span class="category-badge"><i class="fas fa-images me-1"></i> Gallery Collection</span>
+    <h2 style="color: var(--primary);">Elders Greek Artwork</h2>
+    <p style="color: var(--text-body); max-width: 700px; margin: 0 auto; font-size: 1.1rem;">
+      Masterful Greek calligraphy honoring love, hope, wisdom, and peace.
+    </p>
+  </div>
+
+  <div class="row g-4">
+    <div class="col-lg-4 col-md-6">
+      <div class="artwork-card">
+        <img src="elders greek artwork1.png" class="artwork-img" alt="Agapi Love Study">
+        <h5 class="artwork-title">Agapi (Love) Flow Study</h5>
+        <p class="artwork-desc">
+          This artwork showcases elegant Greek calligraphy featuring the word “αγάπη” (Love) written repeatedly in smooth black ink strokes to practice letter flow and consistency.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6">
+      <div class="artwork-card">
+        <img src="elders greek artwork2.png" class="artwork-img" alt="Elpida Hope Sheet">
+        <h5 class="artwork-title">Elpida (Hope) Script Sheets</h5>
+        <p class="artwork-desc">
+          This artwork showcases traditional Greek calligraphy practice sheets with the word “ελπίδα” (Hope) written in multiple styles, showing stroke thickness and neat spacing.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6">
+      <div class="artwork-card">
+        <img src="elders greek artwork3.png" class="artwork-img" alt="Sophia Wisdom Harmony">
+        <h5 class="artwork-title">Sophia (Wisdom) Harmony</h5>
+        <p class="artwork-desc">
+          This artwork showcases Greek calligraphy practice work featuring “σοφία” (Wisdom) written repeatedly in clean lettering, highlighting balance, symmetry, and beautiful handwriting.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6">
+      <div class="artwork-card">
+        <img src="eledrs greek artwork4.png" class="artwork-img" alt="Chara Joy Strokes">
+        <h5 class="artwork-title">Chara (Joy) Traditional Strokes</h5>
+        <p class="artwork-desc">
+          This artwork showcases Greek calligraphy practice sheets with the word “χαρά” (Joy) written in artistic strokes, giving a calm and classic handwritten look.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6">
+      <div class="artwork-card">
+        <img src="elders greek artwork5.png" class="artwork-img" alt="Decorative Script Mon Amour">
+        <h5 class="artwork-title">Decorative Script Study</h5>
+        <p class="artwork-desc">
+          This artwork showcases decorative calligraphy practice written as “Mon Amour” in a stylish script font, created on vintage paper with traditional ink tools for an elegant aesthetic.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6">
+      <div class="artwork-card">
+        <img src="elders greek artwork6.png" class="artwork-img" alt="Eirene Peace Composition">
+        <h5 class="artwork-title">Eirene (Peace) Composition</h5>
+        <p class="artwork-desc">
+          Traditional Greek calligraphy practice featuring the word “ειρήνη” (Peace) written in smooth black ink with repeated strokes, focusing on neat letter formation and spacing.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer>
-<div class="container">
-  <div class="footer-container">
-    <div class="footer-logo">
-      <h3>Calligraphy Art</h3>
-    <p>Your gateway to the beautiful art of calligraphy. Learn, practice, and master the skills to create stunning handwritten art.</p>
-  </div>
-  <div class="footer-links">
-    <h4> Quick Links</h4>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="catogries.html">Categories</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="feedback.html">Feedback</a></li>     
-    </ul>
-    
-  </div>
-  <div class="footer-social">
-    <h4>Follow Us</h4>
-    <div class="social-icons">
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-pinterest"></i></a>
-      <a href="#"><i class="fab fa-youtube"></i></a>
+  <div class="container">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <h3>Calligraphy Art</h3>
+        <p>Your gateway to the beautiful art of calligraphy. Learn, practice, and master the skills to create stunning handwritten art.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catogries.html">Categories</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="feedback.html">Feedback</a></li>     
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2026 Calligraphy Art | All Rights Reserved By Muhammad Maaz</p>
     </div>
   </div>
-</div>
-</div>
-<div class="copyright">
-  <p>&copy; 2026 Calligraphy Art | All Rights Reserved By Muhammad Maaz</p>
-</div>
 </footer>
+
+<!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>

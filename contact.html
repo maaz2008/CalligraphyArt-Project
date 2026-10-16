@@ -3,40 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calligraphy Art</title>
+  <title>Calligraphy Art | Contact Us</title>
 
-  <!-- Bootstrap -->
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Leaflet -->
+  <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
-  <!-- Social Icons CDN -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg custom-navbar navbar-dark">
-  <div class="container-fluid">
-    <i class="fas fa-pen-nib"></i>
-    <a class="navbar-brand d-flex align-items-center" href="index.html">
+<nav class="navbar navbar-expand-lg custom-navbar navbar-dark sticky-top">
+  <div class="container-fluid px-lg-4">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+      <i class="fas fa-pen-nib brand-icon"></i>
       <span>Calligraphy Art</span>
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse">
+
+    <!-- Responsive Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-
-    <div class="collapse navbar-collapse justify-content-center">
-      <ul class="navbar-nav gap-4">
+    <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
+      <ul class="navbar-nav gap-2 gap-lg-3">
         <li class="nav-item"><a class="nav-link px-3" href="index.html">Home</a></li>
         <li class="nav-item dropdown">
           <a class="nav-link px-3 dropdown-toggle" href="#" data-bs-toggle="dropdown">Categories</a>
           <ul class="dropdown-menu">
+            <li><a class="dropdown-item fw-bold" href="catogries.html"><i class="fas fa-th-large me-2"></i>All Categories</a></li>
+            <li><hr class="dropdown-divider border-secondary my-1"></li>
             <li class="dropdown-submenu">
               <a class="dropdown-item dropdown-toggle" href="#">For Kids</a>
               <ul class="dropdown-menu">
@@ -53,7 +62,6 @@
                 <li><a class="dropdown-item" href="elders-indic.html">Indic</a></li>
               </ul>
             </li>
-
           </ul>
         </li>
 
@@ -66,113 +74,253 @@
 </nav>
 
 <!-- CONTACT + MAP SECTION -->
-<section class="container my-5">
-  
-  <div class="row align-items-start">
+<main class="container my-5">
+  <div class="text-center mb-5">
+    <span class="category-badge"><i class="fas fa-envelope-open-text me-1"></i> Get In Touch</span>
+    <h1 style="color: var(--primary);">Contact Our Studio</h1>
+    <p style="color: var(--text-body); max-width: 650px; margin: 10px auto 0 auto; font-size: 1.1rem;">
+      Have a question about our calligraphy workshops, bespoke artwork commissions, or children's programs? Send us a message or visit our studio.
+    </p>
+  </div>
 
-    <!-- CONTACT FORM -->
-<div class="col-lg-6">
-  <h2 id="h1">Contact Us</h2>
+  <div class="row g-4 align-items-stretch contact-section-container">
 
-  <form id="contactForm">
-    
-    <!-- Username -->
-    <input type="text" id="username" class="form-control mb-1" placeholder="Enter Your Name" pattern="[A-Z a-z ]+" />
-    <small id="userError" style="color:red; display:none;">Username must be at least 3 characters</small>
+    <!-- CONTACT FORM CARD -->
+    <div class="col-lg-6">
+      <div class="contact-card">
+        <h2>Send Us a Message</h2>
 
-    <!-- Email -->
-    <input type="email" id="email" class="form-control mb-1 mt-3" placeholder="Enter Your Email" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$">
-    <small id="emailError" style="color:red; display:none;">Enter a valid email</small>
+        <!-- Success Notification -->
+        <div id="contactSuccess" class="form-success-banner">
+          <i class="fas fa-check-circle me-2"></i>
+          <strong>Message Sent!</strong> Thank you for reaching out. We will get back to you within 24 hours.
+        </div>
 
-    <!-- Message -->
-    <textarea id="message" class="form-control mb-1 mt-3" rows="6" placeholder="Message" pattern="[A-Za-z0-9 .,!?'\n\r-]+"></textarea>
-    <small id="msgError" style="color:red; display:none;">Message must be at least 10 characters</small>
+        <form id="contactForm" novalidate>
+          <!-- Username -->
+          <div class="mb-3">
+            <label for="username" class="form-label fw-semibold" style="color: var(--primary);">Full Name</label>
+            <input type="text" id="username" class="form-control" placeholder="e.g. John Doe" required />
+            <small id="userError" class="text-danger fw-semibold mt-1" style="display:none;">Please enter a valid name (minimum 3 letters).</small>
+          </div>
 
-    <div class="form-btn mt-3">
-      <button type="submit">Submit</button>
+          <!-- Email -->
+          <div class="mb-3">
+            <label for="email" class="form-label fw-semibold" style="color: var(--primary);">Email Address</label>
+            <input type="email" id="email" class="form-control" placeholder="e.g. name@example.com" required />
+            <small id="emailError" class="text-danger fw-semibold mt-1" style="display:none;">Please enter a valid email address.</small>
+          </div>
+
+          <!-- Message -->
+          <div class="mb-3">
+            <label for="message" class="form-label fw-semibold" style="color: var(--primary);">Your Message / Inquiry</label>
+            <textarea id="message" class="form-control" rows="5" placeholder="Tell us about the classes or artwork you are interested in..." required></textarea>
+            <small id="msgError" class="text-danger fw-semibold mt-1" style="display:none;">Message must be at least 10 characters long.</small>
+          </div>
+
+          <div class="form-btn">
+            <button type="submit" class="custom-submit-btn">
+              <i class="fas fa-paper-plane me-2"></i>Send Message
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
 
-  </form>
-</div>
-<script>
-  var emailError
-
-  
-</script>
-
-    <!-- MAP -->
+    <!-- STUDIO LOCATION & INFO CARD -->
     <div class="col-lg-6">
-      <h2 class="location">Our Location</h2>
-      <div id="map"></div>
+      <div class="location-card d-flex flex-column justify-content-between">
+        <div>
+          <h2>Our Studio Location</h2>
+          <div id="map"></div>
+        </div>
+
+        <ul class="contact-info-list">
+          <li>
+            <i class="fas fa-map-marker-alt"></i>
+            <span><strong>Address:</strong> Calligraphy Arts Pavilion, 104 Heritage Avenue</span>
+          </li>
+          <li>
+            <i class="fas fa-clock"></i>
+            <span><strong>Hours:</strong> Monday – Saturday: 9:00 AM – 7:00 PM (Closed Sundays)</span>
+          </li>
+          <li>
+            <i class="fas fa-phone-alt"></i>
+            <span><strong>Phone:</strong> +1 (555) 321-7890 / +92 300 1234567</span>
+          </li>
+          <li>
+            <i class="fas fa-envelope"></i>
+            <span><strong>Email:</strong> studio@calligraphyart.org</span>
+          </li>
+        </ul>
+      </div>
     </div>
 
   </div>
-</section>
+</main>
 
-
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <h3>Calligraphy Art</h3>
+        <p>Your gateway to the beautiful art of calligraphy. Learn, practice, and master the skills to create stunning handwritten art.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catogries.html">Categories</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="feedback.html">Feedback</a></li>     
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2026 Calligraphy Art | All Rights Reserved By Muhammad Maaz</p>
+    </div>
+  </div>
+</footer>
 
 <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
+<!-- Leaflet Map & Contact Form Script -->
 <script>
-  navigator.geolocation.getCurrentPosition(
-    function (position) {
-      const lat = position.coords.latitude;
-      const lng = position.coords.longitude;
+  // 1. Initialize Map with Reliable Studio Location (Karachi Heritage District)
+  const studioLat = 24.8607;
+  const studioLng = 67.0011;
 
-      const map = L.map('map').setView([lat, lng], 13);
+  const map = L.map('map').setView([studioLat, studioLng], 13);
 
-      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; OpenStreetMap contributors'
-      }).addTo(map);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+    maxZoom: 19,
+    subdomains: 'abcd',
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+  }).addTo(map);
 
-      L.marker([lat, lng]).addTo(map)
-        .bindPopup("You are here")
-        .openPopup();
-    },
-    function (error) {
-      console.log(error);
+  const studioMarker = L.marker([studioLat, studioLng]).addTo(map)
+    .bindPopup("<b>Calligraphy Art Studio</b><br>Heritage Avenue<br>Open Daily for Workshops")
+    .openPopup();
+
+  // Try Geolocation to enrich map with user's position if permitted
+  if ("geolocation" in navigator) {
+    navigator.geolocation.getCurrentPosition(
+      function (position) {
+        const userLat = position.coords.latitude;
+        const userLng = position.coords.longitude;
+        L.marker([userLat, userLng]).addTo(map)
+          .bindPopup("<b>Your Current Location</b>")
+          .openPopup();
+
+        const bounds = L.latLngBounds([
+          [studioLat, studioLng],
+          [userLat, userLng]
+        ]);
+        map.fitBounds(bounds, { padding: [50, 50] });
+      },
+      function (err) {
+        // Geolocation denied or unavailable - studio marker remains active and visible
+        console.log("Geolocation fallback to studio coordinates.");
+      },
+      { timeout: 7000 }
+    );
+  }
+
+  // 2. Form Validation & Submission Handler
+  const contactForm = document.getElementById('contactForm');
+  const usernameInput = document.getElementById('username');
+  const emailInput = document.getElementById('email');
+  const messageInput = document.getElementById('message');
+
+  const userError = document.getElementById('userError');
+  const emailError = document.getElementById('emailError');
+  const msgError = document.getElementById('msgError');
+  const contactSuccess = document.getElementById('contactSuccess');
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const nameRegex = /^[A-Za-z\s.'-]{3,50}$/;
+
+  contactForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    let isValid = true;
+
+    // Validate Name
+    if (!nameRegex.test(usernameInput.value.trim())) {
+      userError.style.display = 'block';
+      usernameInput.classList.add('is-invalid');
+      isValid = false;
+    } else {
+      userError.style.display = 'none';
+      usernameInput.classList.remove('is-invalid');
     }
-  );
+
+    // Validate Email
+    if (!emailRegex.test(emailInput.value.trim())) {
+      emailError.style.display = 'block';
+      emailInput.classList.add('is-invalid');
+      isValid = false;
+    } else {
+      emailError.style.display = 'none';
+      emailInput.classList.remove('is-invalid');
+    }
+
+    // Validate Message
+    if (messageInput.value.trim().length < 10) {
+      msgError.style.display = 'block';
+      messageInput.classList.add('is-invalid');
+      isValid = false;
+    } else {
+      msgError.style.display = 'none';
+      messageInput.classList.remove('is-invalid');
+    }
+
+    if (isValid) {
+      // Show success banner
+      contactSuccess.style.display = 'block';
+      contactSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      contactForm.reset();
+
+      // Automatically hide after 6 seconds
+      setTimeout(function () {
+        contactSuccess.style.display = 'none';
+      }, 6000);
+    }
+  });
+
+  // Dynamic input validation clearing
+  usernameInput.addEventListener('input', function() {
+    if (nameRegex.test(this.value.trim())) {
+      userError.style.display = 'none';
+      this.classList.remove('is-invalid');
+    }
+  });
+  emailInput.addEventListener('input', function() {
+    if (emailRegex.test(this.value.trim())) {
+      emailError.style.display = 'none';
+      this.classList.remove('is-invalid');
+    }
+  });
+  messageInput.addEventListener('input', function() {
+    if (this.value.trim().length >= 10) {
+      msgError.style.display = 'none';
+      this.classList.remove('is-invalid');
+    }
+  });
 </script>
-
-<!-- FOOTER -->
-<footer>
-<div class="container">
-  <div class="footer-container">
-    <div class="footer-logo">
-      <h3>Calligraphy Art</h3>
-    <p>Your gateway to the beautiful art of calligraphy. Learn, practice, and master the skills to create stunning handwritten art.</p>
-  </div>
-  <div class="footer-links">
-    <h4> Quick Links</h4>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="catogries.html">Categories</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="feedback.html">Feedback</a></li>     
-    </ul>
-    
-  </div>
-  <div class="footer-social">
-    <h4>Follow Us</h4>
-    <div class="social-icons">
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-pinterest"></i></a>
-      <a href="#"><i class="fab fa-youtube"></i></a>
-    </div>
-  </div>
-</div>
-</div>
-<div class="copyright">
-  <p>&copy; 2026 Calligraphy Art | All Rights Reserved By Muhammad Maaz</p>
-</div>
-</footer>
-
 
 </body>
 </html>
